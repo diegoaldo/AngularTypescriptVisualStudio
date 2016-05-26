@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html  lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+   
+</head>
+<body data-ng-app="myApp">
+    <h1>TypeScript</h1>
+  
+
+    <div data-ng-controller="MyController as mc">
+        <div data-ng-repeat="element in mc.data">
+            <input type="text" ng-model="element.name">
+        </div>
+        <button ng-click="mc.GetFlowers()">Click Me</button>
+
+        <div data-ng-repeat="flower in mc.flowers">
+            <input type="text" ng-model="flower.Name">
+        </div>
+
+
+
+
+    </div>
+
+   
+    <script src="Scripts/jquery-2.2.3.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
